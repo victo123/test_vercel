@@ -22,6 +22,7 @@ app.get('/hello', (req, res) => {
   res.status(200).json({ msg: "route to /hello is ok" });
 })
 
+/*
 app.get('/test', (req, res) => {
   https.get('https://jsonplaceholder.typicode.com/users', res => {
     let data = [];
@@ -45,6 +46,7 @@ app.get('/test', (req, res) => {
     console.log('Error: ', err.message);
   });
 })
+*/
 
 
 app.listen(PORT, () => console.log(`Server is running in PORT ${PORT}`));
