@@ -22,4 +22,15 @@ router.get('/fare', function(req, res, next) {
     });
 });
 
+router.get('/trends', function(req, res, next) {
+    fetch('https://exodus.stockbit.com/emitten/trending')
+    .then((res) => res.json())
+    .then((data) => {
+        res.send({ data });
+    })
+    .catch((err) => {
+        res.send(err);
+    });
+});
+
 module.exports = router;
